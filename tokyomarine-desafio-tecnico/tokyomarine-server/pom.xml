@@ -6,7 +6,7 @@
 	<groupId>br.carloskafka</groupId>
 	<artifactId>tokyomarineserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>planetstarwars</name>
+	<name>tokyomarine</name>
 
 	<build>
 		<plugins>
@@ -222,7 +222,7 @@
 		</dependency>
 		<dependency>
 			<groupId>br.carloskafka</groupId>
-			<artifactId>planetstarwarscommons</artifactId>
+			<artifactId>tokyomarinecommons</artifactId>
 			<version>0.1.0</version>
 		</dependency>
 		     <dependency>
