@@ -40,7 +40,7 @@ public class RepositorioCliente {
 		return clienteASerSalvo;
 	}
 
-	public List<Cliente> getAll() {
+	public List<Cliente> obterClientes() {
 		List<Cliente> customers = new ArrayList<Cliente>();
 
 		try {

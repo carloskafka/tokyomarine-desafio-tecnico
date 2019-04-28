@@ -1,15 +1,10 @@
 package br.carloskafka.tokyomarine;
 
-import java.net.URI;
 import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -44,13 +39,13 @@ public class Aplicacao implements CommandLineRunner {
 					ResultadoCadastroClienteDTO.class);
 		}
 		
-		List<ClienteDTO> clientesDto = new RestTemplate().exchange("http://localhost:8080/api/customers",
-				HttpMethod.GET, null, new ParameterizedTypeReference<List<ClienteDTO>>() {
-		}).getBody();
-		
-		for (ClienteDTO clienteDtoObtido : clientesDto) {
-			System.out.println(clienteDtoObtido); 
-		}
+//		List<ClienteDTO> clientesDto = new RestTemplate().exchange("http://localhost:8080/api/customers",
+//				HttpMethod.GET, null, new ParameterizedTypeReference<List<ClienteDTO>>() {
+//		}).getBody();
+//		
+//		for (ClienteDTO clienteDtoObtido : clientesDto) {
+//			System.out.println(clienteDtoObtido); 
+//		}
 
 	}
 
