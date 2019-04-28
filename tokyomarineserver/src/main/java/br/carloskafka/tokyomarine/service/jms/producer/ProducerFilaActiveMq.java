@@ -8,14 +8,14 @@ import org.springframework.stereotype.Component;
 import br.carloskafka.tokyomarine.dtos.ClienteDTO;
 
 @Component
-public class JmsProducer {
+public class ProducerFilaActiveMq {
 	@Autowired
 	private JmsTemplate jmsTemplate;
 	
 	@Value("${gkz.activemq.queue}")
-	private String queue;
+	private String nomeFila;
 	
 	public void send(ClienteDTO clienteDto){
-		jmsTemplate.convertAndSend(queue, clienteDto);
+		jmsTemplate.convertAndSend(nomeFila, clienteDto);
 	}
 }
