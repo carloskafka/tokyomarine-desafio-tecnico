@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.carloskafka.tokyomarine.domain.Cliente;
 import br.carloskafka.tokyomarine.dtos.ClienteDTO;
 import br.carloskafka.tokyomarine.service.ServicoCliente;
-import br.carloskafka.tokyomarine.service.jms.producer.JmsProducer;
+import br.carloskafka.tokyomarine.service.jms.producer.ProducerFilaActiveMq;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -20,22 +20,22 @@ import io.swagger.annotations.ApiResponses;
 public class ControladorCliente {
 
 	@Autowired
-	private JmsProducer jmsProducer;
+	private ProducerFilaActiveMq producerFilaActiveMq;
 
 	@Autowired
 	private ServicoCliente servicoCliente;
 
 	@ApiOperation(value = "Adicionar um cliente", response = Cliente.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Adicionou um novo cliente com sucesso.") })
-	@PostMapping(value = "/api/customer")
+	@PostMapping(value = ContratoRest.CLIENTE_API)
 	public ClienteDTO postCustomer(@RequestBody ClienteDTO clienteDto) {
-		jmsProducer.send(clienteDto);
+		producerFilaActiveMq.send(clienteDto);
 		return clienteDto;
 	}
 
 	@ApiOperation(value = "Obter todos os clientes", response = Cliente.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Relação de clientes obtida com sucesso.") })
-	@GetMapping(value = "/api/customers")
+	@GetMapping(value = ContratoRest.CLIENTES_API)
 	public List<ClienteDTO> getAll() {
 		return servicoCliente.getAll();
 	}

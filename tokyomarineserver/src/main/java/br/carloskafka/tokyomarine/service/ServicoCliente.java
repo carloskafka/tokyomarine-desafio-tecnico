@@ -7,5 +7,5 @@ import br.carloskafka.tokyomarine.dtos.ResultadoCadastroClienteDTO;
 
 public interface ServicoCliente {
 	public List<ClienteDTO> getAll();
-	public ResultadoCadastroClienteDTO add(ClienteDTO cliente);
+	public ResultadoCadastroClienteDTO add(ClienteDTO clienteDto);
 }
