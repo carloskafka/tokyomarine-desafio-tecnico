@@ -1,14 +1,12 @@
 package br.carloskafka.tokyomarine.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import br.carloskafka.tokyomarine.domain.Cliente;
 import br.carloskafka.tokyomarine.dtos.ClienteDTO;
 import br.carloskafka.tokyomarine.dtos.ResultadoCadastroClienteDTO;
+import br.carloskafka.tokyomarine.dtos.ResultadoListagemClienteDTO;
 import br.carloskafka.tokyomarine.factory.FabricaCliente;
 import br.carloskafka.tokyomarine.repository.RepositorioCliente;
 
@@ -17,15 +15,6 @@ public class ServicoClienteImpl implements ServicoCliente {
 
 	@Autowired
 	private RepositorioCliente repositorioCliente;
-
-	@Override
-	public List<ClienteDTO> getAll() {
-		List<ClienteDTO> clientesDto = new ArrayList<>();
-
-		clientesDto = FabricaCliente.converterParaDTO(repositorioCliente.getAll());
-
-		return clientesDto;
-	}
 
 	@Override
 	public ResultadoCadastroClienteDTO add(ClienteDTO clienteDto) {
@@ -48,4 +37,12 @@ public class ServicoClienteImpl implements ServicoCliente {
 		return resultadoCadastroClienteDTO;
 	}
 
+	@Override
+	public ResultadoListagemClienteDTO obterClientes() {
+		ResultadoListagemClienteDTO resultadoListagemClienteDto = new ResultadoListagemClienteDTO();
+		
+		resultadoListagemClienteDto.setClientesDto(FabricaCliente.converterParaDTO(repositorioCliente.obterClientes()));
+		
+		return resultadoListagemClienteDto;
+	}
 }

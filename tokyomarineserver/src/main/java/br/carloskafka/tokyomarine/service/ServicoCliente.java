@@ -1,11 +1,10 @@
 package br.carloskafka.tokyomarine.service;
 
-import java.util.List;
-
 import br.carloskafka.tokyomarine.dtos.ClienteDTO;
 import br.carloskafka.tokyomarine.dtos.ResultadoCadastroClienteDTO;
+import br.carloskafka.tokyomarine.dtos.ResultadoListagemClienteDTO;
 
 public interface ServicoCliente {
-	public List<ClienteDTO> getAll();
+	public ResultadoListagemClienteDTO obterClientes();
 	public ResultadoCadastroClienteDTO add(ClienteDTO clienteDto);
 }

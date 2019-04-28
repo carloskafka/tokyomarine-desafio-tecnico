@@ -3,13 +3,14 @@ package br.carloskafka.tokyomarine.dtos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResultadoCadastroClienteDTO {
+public class ResultadoListagemClienteDTO {
 	private List<String> erros;
-	private ClienteDTO clienteDto;
+	private List<ClienteDTO> clientesDto;
 	private boolean sucesso;
 
-	public ResultadoCadastroClienteDTO() {
+	public ResultadoListagemClienteDTO() {
 		erros = new ArrayList<>();
+		clientesDto = new ArrayList<>();
 	}
 
 	public List<String> getErros() {
@@ -20,12 +21,12 @@ public class ResultadoCadastroClienteDTO {
 		this.erros = erros;
 	}
 
-	public ClienteDTO getClienteDto() {
-		return clienteDto;
+	public List<ClienteDTO> getClientesDto() {
+		return clientesDto;
 	}
 
-	public void setClienteDto(ClienteDTO clienteDto) {
-		this.clienteDto = clienteDto;
+	public void setClientesDto(List<ClienteDTO> clientesDto) {
+		this.clientesDto = clientesDto;
 		sucesso = true;
 	}
 
@@ -39,9 +40,8 @@ public class ResultadoCadastroClienteDTO {
 
 	@Override
 	public String toString() {
-		return "ResultadoCadastroClienteDTO [erros=" + erros + ", clienteDto=" + clienteDto + ", sucesso=" + sucesso
+		return "ResultadoListagemClienteDTO [erros=" + erros + ", clientesDto=" + clientesDto + ", sucesso=" + sucesso
 				+ "]";
 	}
-	
 
 }
