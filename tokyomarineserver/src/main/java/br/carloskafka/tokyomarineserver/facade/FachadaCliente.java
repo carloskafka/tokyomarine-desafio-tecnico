@@ -1,4 +1,4 @@
-package br.carloskafka.tokyomarineserver.service;
+package br.carloskafka.tokyomarineserver.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -9,9 +9,10 @@ import br.carloskafka.tokyomarinecommons.dtos.ResultadoListagemClienteDTO;
 import br.carloskafka.tokyomarineserver.domain.Cliente;
 import br.carloskafka.tokyomarineserver.factory.FabricaCliente;
 import br.carloskafka.tokyomarineserver.repository.RepositorioCliente;
+import br.carloskafka.tokyomarineserver.service.ServicoCliente;
 
 @Component
-public class ServicoClienteImpl implements ServicoCliente {
+public class FachadaCliente implements ServicoCliente {
 
 	@Autowired
 	private RepositorioCliente repositorioCliente;
