@@ -15,6 +15,7 @@ import br.carloskafka.tokyomarineclient.service.ServicoCliente;
 import br.carloskafka.tokyomarinecommons.dtos.ClienteDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ResultadoCadastroClienteDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ResultadoListagemClienteDTO;
+import br.carloskafka.tokyomarinecommons.service.rest.ContratoRest;
 
 @Controller
 public class ControladorCliente {
