@@ -18,11 +18,12 @@ A solução possui três módulos:
 ## Requisitos
 
 1. Instalar banco de dados **MySQL** em https://dev.mysql.com/downloads/installer/ e executar o script **script_criacao_banco_de_dados.sql** para criação da tabela planeta e usuario de acesso.
-2. Executar `mvn install`no projeto **PlanetStarWars-commons**
-3. Executar as aplicações **planetstarwars-server** e **planetstarwars-reativo** com o comando `mvn spring-boot:run`
+2. Executar Mensageria **ActiveMQ** baixada em https://activemq.apache.org/components/classic/download/ e executar através do comando `activemq start` no diretorio **bin**
+2. Executar `mvn install`no projeto **tokyomarinecommons**
+3. Executar as aplicações **tokyomarineserver** e **tokyomarineclient** com o comando `mvn spring-boot:run`
 
-O servidor da aplicação **planetstarwars-server** irá iniciar em <http://localhost:8080>.
-O servidor da aplicação **planetstarwars-reativo** irá iniciar em <http://localhost:9090>.
+O servidor da aplicação **tokyomarineserver** irá iniciar em <http://localhost:8080>.
+O servidor da aplicação **tokyomarineclient** irá iniciar em <http://localhost:8081>.
 
 ## Rest Endpoints
 
