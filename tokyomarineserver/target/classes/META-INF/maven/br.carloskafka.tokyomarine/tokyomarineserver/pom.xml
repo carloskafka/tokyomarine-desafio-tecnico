@@ -148,7 +148,7 @@
 		<dependency>
 			<groupId>br.carloskafka.tokyomarine</groupId>
 			<artifactId>tokyomarinecommons</artifactId>
-			<version>0.0.1</version>
+			<version>${tokyomarinecommons.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -171,6 +171,6 @@
 		<org.thymeleaf-version>3.0.9.RELEASE</org.thymeleaf-version>
 		<org.thymeleaf.extras-version>3.0.1.RELEASE</org.thymeleaf.extras-version>
 		<thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>
-
+		<tokyomarinecommons.version>0.0.1</tokyomarinecommons.version>
 	</properties>
 </project>
