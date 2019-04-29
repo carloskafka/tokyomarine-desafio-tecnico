@@ -1,4 +1,4 @@
-package br.carloskafka.tokyomarineclient.service;
+package br.carloskafka.tokyomarineclient.facade;
 
 import java.util.Arrays;
 
@@ -7,15 +7,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+import br.carloskafka.tokyomarineclient.service.ServicoCliente;
 import br.carloskafka.tokyomarineclient.service.utils.HttpUtils;
 import br.carloskafka.tokyomarinecommons.dtos.ClienteDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ResultadoCadastroClienteDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ResultadoListagemClienteDTO;
 
 @Component
-public class ServicoClienteImpl implements ServicoCliente {
+public class FachadaCliente implements ServicoCliente {
 
-	private Logger logger = LoggerFactory.getLogger(ServicoClienteImpl.class);
+	private Logger logger = LoggerFactory.getLogger(FachadaCliente.class);
 	
 	private static final String ERRO_SERVICO_INDISPONIVEL_TENTE_NOVAMENTE_MAIS_TARDE = "Serviço indisponível. Tente novamente mais tarde.";
 
