@@ -27,6 +27,7 @@ O servidor da aplicação **tokyomarineserver** irá iniciar em <http://localhos
 O servidor da aplicação **tokyomarineclient** irá iniciar em <http://localhost:8081>.
 
 O framework **Swagger** responsável por documentar os controladores da API iniciará em http://localhost:8080/swagger-ui.html/
+
 O framework **Spring Boot Actuator** responsável por monitorar o estado da aplicação iniciará em http://localhost:8080/actuator/
 
 ## Rest Endpoints
