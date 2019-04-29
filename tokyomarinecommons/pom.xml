@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.carloskafka.tokyomarine</groupId>
-	<artifactId>tokyomarineclient</artifactId>
+	<artifactId>tokyomarinecommons</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>tokyomarineclient</name>
-	<description>tokyomarineclient</description>
+	<name>tokyomarinecommons</name>
+	<description>tokyomarinecommons</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -89,11 +89,6 @@
 			<artifactId>thymeleaf-extras-java8time</artifactId>
 			<version>${org.thymeleaf.extras-version}</version>
 		</dependency>
-		<dependency>
-			<groupId>br.carloskafka.tokyomarine</groupId>
-			<artifactId>tokyomarinecommons</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -108,7 +103,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.8</java.version>		
 		<org.thymeleaf-version>3.0.9.RELEASE</org.thymeleaf-version>
 		<org.thymeleaf.extras-version>3.0.1.RELEASE</org.thymeleaf.extras-version>
 		<thymeleaf-layout-dialect.version>2.3.0</thymeleaf-layout-dialect.version>

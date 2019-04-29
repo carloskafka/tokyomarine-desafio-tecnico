@@ -59,6 +59,9 @@
 			<!--/.container-fluid -->
 		</nav>
 		<div class="jumbotron">
+			<p th:if="!${resultadoListagemClienteDto.erros.empty}">
+				<p th:text="${resultadoListagemClienteDto.descricaoErro}" class="alert alert-danger" />
+			</p>
 			<h1>Clientes Cadastrados</h1>
 			<table border="1"
 				class="table table-striped table-bordered table-hover"
