@@ -47,7 +47,7 @@ public class RepositorioClienteImpl implements RepositorioCliente {
 		List<Cliente> clientes = new ArrayList<>();
 
 		try {
-			TypedQuery<Cliente> typedQuery = em.createQuery("SELECT c FROM Cliente c JOIN FETCH c.apolicesCliente",
+			TypedQuery<Cliente> typedQuery = em.createQuery("SELECT c FROM Cliente c",
 					Cliente.class);
 			typedQuery.setFirstResult((numeroPagina - 1) * quantidadeTotalPorPagina);
 			typedQuery.setMaxResults(quantidadeTotalPorPagina);
