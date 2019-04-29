@@ -23,6 +23,7 @@ A solução possui três módulos:
 3. Executar as aplicações **tokyomarineserver** e **tokyomarineclient** com o comando `mvn spring-boot:run`
 
 O servidor da aplicação **tokyomarineserver** irá iniciar em <http://localhost:8080>.
+
 O servidor da aplicação **tokyomarineclient** irá iniciar em <http://localhost:8081>.
 
 O framework **Swagger** responsável por documentar os controladores da API iniciará em http://localhost:8080/swagger-ui.html/
