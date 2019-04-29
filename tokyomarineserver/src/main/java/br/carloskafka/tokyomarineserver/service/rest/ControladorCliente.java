@@ -6,20 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.carloskafka.tokyomarinecommons.dtos.ClienteDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ResultadoListagemClienteDTO;
-import br.carloskafka.tokyomarineserver.domain.Cliente;
+import br.carloskafka.tokyomarinecommons.service.rest.ContratoRest;
 import br.carloskafka.tokyomarineserver.service.ServicoCliente;
 import br.carloskafka.tokyomarineserver.service.jms.producer.ProducerFilaActiveMq;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@RestController
+@RestController()
+@RequestMapping("/api")
 public class ControladorCliente {
 
 	@Autowired
@@ -28,7 +30,7 @@ public class ControladorCliente {
 	@Autowired
 	private ServicoCliente servicoCliente;
 
-	@ApiOperation(value = "Adicionar um cliente", response = Cliente.class)
+	@ApiOperation(value = "Adicionar um cliente", response = ClienteDTO.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Adicionou um novo cliente com sucesso.") })
 	@PostMapping(value = ContratoRest.CLIENTE_API)
 	public @ResponseBody ClienteDTO cadastrarCliente(@RequestBody ClienteDTO clienteDto) {

@@ -1,4 +1,4 @@
-package br.carloskafka.tokyomarineclient.service.rest;
+package br.carloskafka.tokyomarinecommons.service.rest;
 
 public class ContratoRest {
 

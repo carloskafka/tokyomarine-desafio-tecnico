@@ -12,7 +12,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import br.carloskafka.tokyomarinecommons.dtos.ApoliceDTO;
 import br.carloskafka.tokyomarinecommons.dtos.ClienteDTO;
-import br.carloskafka.tokyomarinecommons.dtos.ResultadoCadastroClienteDTO;
 import br.carloskafka.tokyomarineserver.service.utils.HttpUtils;
 
 @SpringBootApplication
@@ -43,7 +42,7 @@ public class AplicacaoServer implements CommandLineRunner {
 
 		for (int i = 0; i <= 10; i++) {
 			new RestTemplate().postForEntity("http://localhost:8080/api/customer", HttpUtils.criar(clienteDto),
-					ResultadoCadastroClienteDTO.class);
+					ClienteDTO.class);
 		}
 		
 //		List<ClienteDTO> clientesDto = new RestTemplate().exchange("http://localhost:8080/api/customers",

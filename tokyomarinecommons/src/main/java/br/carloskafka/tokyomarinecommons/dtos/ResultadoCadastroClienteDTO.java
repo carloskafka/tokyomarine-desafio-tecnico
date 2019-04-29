@@ -42,6 +42,5 @@ public class ResultadoCadastroClienteDTO {
 		return "ResultadoCadastroClienteDTO [erros=" + erros + ", clienteDto=" + clienteDto + ", sucesso=" + sucesso
 				+ "]";
 	}
-	
 
 }
