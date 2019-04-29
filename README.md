@@ -20,7 +20,7 @@ A solução possui três módulos:
 1. Instalar banco de dados **MySQL** em https://dev.mysql.com/downloads/installer/ e executar o script **script_criacao_banco_de_dados.sql** para criação da tabela clientes e usuario de acesso.
 2. Executar Mensageria **ActiveMQ** baixada em https://activemq.apache.org/components/classic/download/ e executar através do comando `activemq start` no diretorio **bin**
 2. Executar `mvn install`no projeto **tokyomarinecommons**
-3. Executar as aplicações **tokyomarineserver** e **tokyomarineclient** com o comando `mvn spring-boot:run`
+3. Executar as aplicações **tokyomarineserver** e **tokyomarineclient** na **IDE Eclipse**
 
 O servidor da aplicação **tokyomarineserver** irá iniciar em <http://localhost:8080>.
 
