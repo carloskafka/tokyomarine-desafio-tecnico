@@ -39,7 +39,7 @@ O framework **Spring Boot Actuator** responsável por monitorar o estado da apli
 
 ```
 
-## Execução de testes de integração
+## `EM ANDAMENTO` Execução de testes de integração
 
 
 O projeto também contém testes de integração para todos os endpoints da API. Para executar os testes de integração, vá até o diretório raíz do projeto e escreva `mvn test` no terminal (windows ou linux).
